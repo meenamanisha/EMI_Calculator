@@ -23,7 +23,7 @@ public class LedgerBoardController {
                     calculateEMI.getLoanEMI(loan);
                     break;
                 case "PAYMENT":
-                    calculateEMI.receivePayment(operations[1], operations[2], Integer.parseInt(operations[3]), Integer.parseInt(operations[4]));
+                    calculateEMI.receivePayment(operations[1], operations[2], Double.parseDouble(operations[3]), Integer.parseInt(operations[4]));
                     break;
                 case "BALANCE":
                     calculateEMI.getBalance(operations[1], operations[2], Integer.parseInt(operations[3]));
@@ -39,9 +39,9 @@ public class LedgerBoardController {
         Loan loan = new Loan();
         loan.setBank_name(inputs[1]);
         loan.setBorrower_name(inputs[2]);
-        loan.setPrincipal(Integer.valueOf(inputs[3]));
+        loan.setPrincipal(Double.parseDouble(inputs[3]));
         loan.setNo_of_years(Integer.valueOf(inputs[4]));
-        loan.setRate_of_Interest(Integer.valueOf(inputs[5]));
+        loan.setRate_of_Interest(Double.parseDouble(inputs[5]));
         return loan;
     }
 }
