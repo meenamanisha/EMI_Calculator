@@ -32,9 +32,9 @@ public class LedgerBoardController {
                     System.out.println("Invalid operation");
             }
         }
-
     }
 
+    // create loan model
     private Loan createLoanModel(String[] inputs) {
         Loan loan = new Loan();
         loan.setBank_name(inputs[1]);
